@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow Or Not</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+        main {
+            max-width: 700px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            color: #4caf50;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="file"] {
+            display: block;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f7f7f7;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #f9f9f9;
+            margin: 5px 0;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .instructions {
+            background-color: #eef9f0;
+            padding: 15px;
+            border-left: 5px solid #4caf50;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Follow Or Not</h1>
+        <p>Find out who's not following you back!</p>
+    </header>
+    <main>
+        <h1>Check Who's Not Following Back</h1>
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <p>
+                This tool helps you identify accounts you're following on Instagram that are not following you back.
+                Follow the steps below to get started:
+            </p>
+            <ol>
+                <li>
+                    <strong>Download your following and followers list from Instagram:</strong>
+                    <ul>
+                        <li>Go to your Instagram profile.</li>
+                        <li>Click on the "Settings" menu, then select <em>"Privacy and Security"</em>.</li>
+                        <li>Under <em>"Data Download"</em>, click "Request Download".</li>
+                        <li>Instagram will email you a link to download your data. Extract the ZIP file you receive.</li>
+                        <li>Inside the extracted folder, find the files <code>following.txt</code> and <code>followers.txt</code>.</li>
+                    </ul>
+                </li>
+                <li>Upload the <strong>Following File</strong> and the <strong>Followers File</strong> below.</li>
+                <li>Click the <strong>Compare</strong> button to see who's not following you back.</li>
+            </ol>
+        </div>
+        <form id="file-form">
+            <label for="following-file">Upload Following File:</label>
+            <input type="file" id="following-file" accept=".txt,.html,.pdf" required>
+            <label for="followers-file">Upload Followers File:</label>
+            <input type="file" id="followers-file" accept=".txt,.html,.pdf" required>
+            <button type="submit">Compare</button>
+        </form>        
+        <div id="output"></div>
+    </main>
+    <footer>
+        Made with 💚 by <a href="#">Me😏*ofc</a>.
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
