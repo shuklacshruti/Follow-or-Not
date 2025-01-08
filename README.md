@@ -22,6 +22,8 @@ How to Run the Project:
     git clone https://github.com/yourusername/Follow-or-Not.git
 - Open the index.html file in your browser to use the tool.
 
+- or click on https://shuklacshruti.github.io/Follow-or-Not/   
+
 Contributions
 This project was created as a personal project. Contributions are welcome!
 Feel free to fork the repository, submit issues, or open pull requests.
